@@ -1,10 +1,7 @@
 #COMMIT TASK
 
-1. Install styled component, react-router-dom, @reduxjs/toolkit
-2. Create BeerPage
-3. Add react-router
-4. Create components
-5. Setup eslint
+1. Install react-redux dependency
+2. Create BeerPage component
 
 GUIDE:
 

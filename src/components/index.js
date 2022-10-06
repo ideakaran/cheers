@@ -1,6 +1,6 @@
 export { default as ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
 export { default as Header } from './Header/Header';
-export { default as Content } from './Content/Content';
+export { default as Content } from './MainContent/MainContent';
 export { default as Card } from './Card/Card';
 export { default as Pagination } from './Pagination/Pagination';
 export { default as Tooltip } from './ToolTip/ToolTip';
