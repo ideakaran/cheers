@@ -1,6 +1,6 @@
 const BEER_API = "https://api.punkapi.com/v2/beers";
-const BEER_DESC_LIMIT_ON_MOB = 120;
-const BEER_DESC_LIMIT = 75;
+const BEER_DESC_LIMIT_ON_MOB = 150;
+const BEER_DESC_LIMIT = 100;
 const BEER_DESC_SEPARATOR = "...";
 
 const media = {

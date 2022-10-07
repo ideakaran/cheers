@@ -10,10 +10,7 @@ function BeerCard({
   beer: { name, tagline, description, image_url: imageUrl, ingredients },
 }) {
   const isMobile = useIsMobile();
-  console.log("IsMobile::", isMobile);
-  useEffect(() => {
-    console.log("isMobilEFfect: ", isMobile);
-  }, [isMobile]);
+  useEffect(() => {}, [isMobile]);
 
   return (
     <BeerCardStyle className="hz-card_style">

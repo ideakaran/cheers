@@ -1,40 +1,35 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import BeerPageStyle from "./BeerPageStyle";
 import { Header, MainContent, Pagination } from "../../components";
 import { getAPIUrl, scrollTo } from "../../utils/util";
+import { fetchAllbeers } from "../../redux/beerSlice";
 
 function BeerPage() {
   const [paginationParam, setPaginationParam] = useState({
     pageNum: 1,
     perPage: 10,
   });
-  const [data, setData] = useState([]);
-  const [error, setError] = useState("");
-  const [loadMore, setLoadMore] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.beers);
   const cardRef = useRef(null);
 
+  let loadMore = false;
+  if (data?.fetchStatus === "loading") {
+    loadMore = true;
+  } else {
+    loadMore = false;
+  }
+
   useEffect(() => {
-    const callPunkAPI = async () => {
-      const apiResponse = await fetch(getAPIUrl(paginationParam));
-      if (!apiResponse.ok) {
-        setError("Something wrong happened");
-        throw new Error(error);
-      } else {
-        setError("");
-      }
-      const jsonResponse = await apiResponse.json();
-      setLoadMore(false);
-      setData([...data, ...jsonResponse]);
-    };
-    callPunkAPI();
-  }, [paginationParam]); // todo update dependency array
+    dispatch(fetchAllbeers(getAPIUrl(paginationParam)));
+  }, [paginationParam]);
 
   const handlePagination = () => {
     setPaginationParam((prevParam) => {
       return { pageNum: prevParam.pageNum + 1, perPage: prevParam.perPage };
     });
-    setLoadMore(true);
     const ref = cardRef.current.children[cardRef.current.children.length - 1];
     scrollTo(ref, { behavior: "smooth" });
   };
@@ -46,12 +41,12 @@ function BeerPage() {
       </a>
       <Header />
       <MainContent
-        data={data}
+        data={data.beers}
         id="main"
         forwardedRef={cardRef}
         loadMore={loadMore}
       />
-      {data && data.length > 0 && (
+      {data.beers && data.beers.length > 0 && (
         <Pagination
           onClick={handlePagination}
           text="Load More"

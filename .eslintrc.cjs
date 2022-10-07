@@ -16,5 +16,6 @@ module.exports = {
   plugins: ["react", "prettier"],
   rules: {
     quotes: ["error", "double", { avoidEscape: true }],
+    
   },
 };
