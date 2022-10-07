@@ -5,13 +5,17 @@ import { limitCharacters } from "../../utils/util";
 
 function BeerContent({ name, tagline, description }) {
   return (
-    <div className="hz-card_content">
-      <h3 className={name ? "hz-card_title" : "hz-card_loading"}>{name}</h3>
-      <h5 className={tagline ? "hz-card_tagline" : "hz-card_loading"}>
-        {tagline}
-      </h5>
-      <div className={description ? "hz-card_description" : "hz-card_loading"}>
-        <p>{limitCharacters(description, false)}</p>
+    <div className="hz-card_content_container">
+      <div className="hz-card_content">
+        <h3 className={name ? "hz-card_title" : "hz-card_loading"}>{name}</h3>
+        <h5 className={tagline ? "hz-card_tagline" : "hz-card_loading"}>
+          {tagline}
+        </h5>
+        <div
+          className={description ? "hz-card_description" : "hz-card_loading"}
+        >
+          <p>{limitCharacters(description, false)}</p>
+        </div>
       </div>
     </div>
   );

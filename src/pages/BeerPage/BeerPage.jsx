@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import BeerPageStyle from "./BeerPageStyle";
 import { Header, MainContent, Pagination } from "../../components";
-import { getAPIUrl } from "../../utils/util";
+import { getAPIUrl, scrollTo } from "../../utils/util";
 
 function BeerPage() {
   const [paginationParam, setPaginationParam] = useState({
@@ -11,6 +11,7 @@ function BeerPage() {
   });
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
+  const cardRef = useRef(null);
 
   useEffect(() => {
     const callPunkAPI = async () => {
@@ -31,6 +32,8 @@ function BeerPage() {
     setPaginationParam((prevParam) => {
       return { pageNum: prevParam.pageNum + 1, perPage: prevParam.perPage };
     });
+    const ref = cardRef.current.children[cardRef.current.children.length - 1];
+    scrollTo(ref, { behavior: "smooth" });
   };
 
   return (
@@ -39,7 +42,7 @@ function BeerPage() {
         Skip to main content
       </a>
       <Header />
-      <MainContent data={data} id="main" />
+      <MainContent data={data} id="main" forwardedRef={cardRef} />
       {data && data.length > 0 && (
         <Pagination
           onClick={handlePagination}

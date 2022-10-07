@@ -1,9 +1,8 @@
 #COMMIT TASK
 
-1. Refactor BeerContent cmp
-2. Style BeerCard, make things look nice
-3. Use Roboto font
-4. Make Content behave responsively
+1. Style BeerCard cmp
+2. Add Scroll to last element when load more clicked 
+
    GUIDE:
 
 5. https://eslint.org/docs/latest/rules/
