@@ -5,11 +5,11 @@ const PaginationStyle = styled.button`
   border: none;
   color: #2e82ce;
   display: flex;
-  margin: auto;
+  margin: 1rem auto;
   gap: 0.3rem;
   cursor: pointer;
-  font-weight: 500;
-  padding: 0;
+  padding: 0.2rem;
+  font-weight: 700;
   &:hover {
     border-bottom: 0.08rem solid #2e82ce;
   }

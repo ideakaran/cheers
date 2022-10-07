@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { limitCharacters } from "../../utils/util";
 
 function BeerContent({ name, tagline, description }) {
   return (
@@ -14,7 +13,7 @@ function BeerContent({ name, tagline, description }) {
         <div
           className={description ? "hz-card_description" : "hz-card_loading"}
         >
-          <p>{limitCharacters(description, false)}</p>
+          <p>{description}</p>
         </div>
       </div>
     </div>

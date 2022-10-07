@@ -11,6 +11,7 @@ function BeerPage() {
   });
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
+  const [loadMore, setLoadMore] = useState(false);
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -23,15 +24,17 @@ function BeerPage() {
         setError("");
       }
       const jsonResponse = await apiResponse.json();
+      setLoadMore(false);
       setData([...data, ...jsonResponse]);
     };
     callPunkAPI();
-  }, [paginationParam]); //todo update dependency array
+  }, [paginationParam]); // todo update dependency array
 
   const handlePagination = () => {
     setPaginationParam((prevParam) => {
       return { pageNum: prevParam.pageNum + 1, perPage: prevParam.perPage };
     });
+    setLoadMore(true);
     const ref = cardRef.current.children[cardRef.current.children.length - 1];
     scrollTo(ref, { behavior: "smooth" });
   };
@@ -42,7 +45,12 @@ function BeerPage() {
         Skip to main content
       </a>
       <Header />
-      <MainContent data={data} id="main" forwardedRef={cardRef} />
+      <MainContent
+        data={data}
+        id="main"
+        forwardedRef={cardRef}
+        loadMore={loadMore}
+      />
       {data && data.length > 0 && (
         <Pagination
           onClick={handlePagination}

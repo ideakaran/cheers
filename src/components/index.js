@@ -6,4 +6,4 @@ export { default as Pagination } from "./Pagination/Pagination";
 export { default as Spinner } from "./Spinner/Spinner";
 export { default as SvgLoader } from "./SvgLoader/SvgLoader";
 export { default as ScrollTo } from "./ScrollTo/ScrollTo";
-export { default as Tooltip } from "./ToolTip/ToolTip";
+export { default as ToolTip } from "./ToolTip/ToolTip";

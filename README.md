@@ -1,9 +1,7 @@
 #COMMIT TASK
 
-1. Style BeerCard cmp
-2. Add Scroll to last element when load more clicked 
+1. Work on scrollto component
+2. Work on useIsMobile hooks
 
-   GUIDE:
-
-5. https://eslint.org/docs/latest/rules/
-6. https://prettier.io/docs/en/options.html
+3. https://eslint.org/docs/latest/rules/
+4. https://prettier.io/docs/en/options.html
