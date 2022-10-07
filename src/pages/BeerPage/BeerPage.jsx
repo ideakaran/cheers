@@ -7,13 +7,13 @@ import { getAPIUrl, scrollTo } from "../../utils/util";
 import { fetchAllbeers } from "../../redux/beerSlice";
 
 function BeerPage() {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.beers);
+  const cardRef = useRef(null);
   const [paginationParam, setPaginationParam] = useState({
     pageNum: 1,
     perPage: 10,
   });
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.beers);
-  const cardRef = useRef(null);
 
   let loadMore = false;
   if (data?.fetchStatus === "loading") {
@@ -23,7 +23,10 @@ function BeerPage() {
   }
 
   useEffect(() => {
-    dispatch(fetchAllbeers(getAPIUrl(paginationParam)));
+    const promise = dispatch(fetchAllbeers(getAPIUrl(paginationParam)));
+    return () => {
+      promise.abort();
+    };
   }, [paginationParam]);
 
   const handlePagination = () => {
