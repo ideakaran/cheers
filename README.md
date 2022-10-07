@@ -1,7 +1,7 @@
-#COMMIT TASK
+This app fetches data from punkapi and displays the beer.
 
-1. Work on scrollto component
-2. Work on useIsMobile hooks
+To use the app,
 
-3. https://eslint.org/docs/latest/rules/
-4. https://prettier.io/docs/en/options.html
+1. checkout the project
+2. npm install
+3. npm run dev
