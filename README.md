@@ -1,11 +1,10 @@
 #COMMIT TASK
 
-1. Work with Pagination component
-2. Work with SVGLoader component
-3. Rename components
-4. Add prop types
+1. Refactor BeerContent cmp
+2. Style BeerCard, make things look nice
+3. Use Roboto font
+4. Make Content behave responsively
+   GUIDE:
 
-GUIDE:
-
-1. https://eslint.org/docs/latest/rules/
-2. https://prettier.io/docs/en/options.html
+5. https://eslint.org/docs/latest/rules/
+6. https://prettier.io/docs/en/options.html

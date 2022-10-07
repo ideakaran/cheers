@@ -3,6 +3,11 @@ const BEER_DESC_LIMIT_ON_MOB = 120;
 const BEER_DESC_LIMIT = 70;
 const BEER_DESC_SEPARATOR = "...";
 
+export const media = {
+  desktop: "@media(min-width: 1000px)",
+  tablet: "@media(min-width: 768px)",
+};
+
 function getAPIUrl({ pageNum, perPage }) {
   return `${BEER_API}?page=${pageNum}&per_page=${perPage}`;
 }

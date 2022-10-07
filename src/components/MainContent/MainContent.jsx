@@ -7,7 +7,9 @@ import MainContentStyle from "./MainContentStyle";
 function MainContent({ data }) {
   return (
     <MainContentStyle>
-      {data && data.map((beer) => <BeerCard beer={beer} key={beer.id} />)}
+      <div className="hz-all-cards_wrapper">
+        {data && data.map((beer) => <BeerCard beer={beer} key={beer.id} />)}
+      </div>
     </MainContentStyle>
   );
 }
