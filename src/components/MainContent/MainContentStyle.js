@@ -1,3 +1,5 @@
 import styled from "styled-components";
 
-export const MainContentStyle = styled.main``;
+const MainContentStyle = styled.main``;
+
+export default MainContentStyle;

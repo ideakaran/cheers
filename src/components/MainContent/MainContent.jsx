@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
-import { MainContentStyle } from "./MainContentStyle";
-import { Card } from "..";
+import Card from "../Card/Card";
+import MainContentStyle from "./MainContentStyle";
 
-function Content({ data }) {
+function MainContent({ data }) {
   return (
     <MainContentStyle>
       {data && data.map((beer) => <Card beer={beer} key={beer.id} />)}
@@ -11,4 +12,4 @@ function Content({ data }) {
   );
 }
 
-export default Content;
+export default MainContent;

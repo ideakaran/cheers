@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-import { BeerPageStyle } from "./BeerPageStyle";
-import { Content, Header } from "../../components";
+import BeerPageStyle from "./BeerPageStyle";
+import { Header, MainContent, Pagination } from "../../components";
+import { getAPIUrl } from "../../utils/util";
 
 function BeerPage() {
-  const [page, setPage] = useState(1);
+  const [paginationParam, setPaginationParam] = useState({
+    pageNum: 1,
+    perPage: 10,
+  });
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const apiCall = async () => {
-      const apiResponse = await fetch(
-        `https://api.punkapi.com/v2/beers?page=${page}`,
-      );
+      const apiResponse = await fetch(getAPIUrl(paginationParam));
       if (!apiResponse.ok) {
         setError("Something wrong happened");
         throw new Error(error);
@@ -23,13 +25,20 @@ function BeerPage() {
       setData(jsonResponse);
     };
     apiCall();
-  }, [page]);
+  }, [paginationParam]); //todo update dependency array
+
+  const handlePagination = () => {
+    setPaginationParam({
+      pageNum: paginationParam.pageNum + 1,
+      perPage: paginationParam.perPage,
+    });
+  };
 
   return (
     <BeerPageStyle>
-      {console.log("Data::", data)}
       <Header />
-      <Content data={data} />
+      <MainContent data={data} />
+      <Pagination onClick={handlePagination} />
     </BeerPageStyle>
   );
 }

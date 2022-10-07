@@ -1,3 +1,4 @@
 .hz-app {
     display: flex;
+    flex-wrap: wrap;
 }

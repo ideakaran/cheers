@@ -1,7 +1,16 @@
-import React from 'react';
+import React from "react";
+import PaginationStyle from "./PaginationStyle";
 
-function Pagination() {
-  return <div>Pagination</div>;
+function Pagination({ onClick }) {
+  return (
+    <PaginationStyle
+      onClick={() => {
+        onClick();
+      }}
+    >
+      Load More
+    </PaginationStyle>
+  );
 }
 
 export default Pagination;
