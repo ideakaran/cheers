@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const CardStyle = styled.div`
+const BeerCardStyle = styled.div`
   img {
     max-height: 8rem;
   }
 `;
 
-export default CardStyle;
+export default BeerCardStyle;

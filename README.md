@@ -1,7 +1,9 @@
 #COMMIT TASK
 
-1. Install react-redux dependency
-2. Create BeerPage component
+1. Work with Pagination component
+2. Work with SVGLoader component
+3. Rename components
+4. Add prop types
 
 GUIDE:
 

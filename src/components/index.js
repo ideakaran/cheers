@@ -1,4 +1,4 @@
-export { default as Card } from "./Card/Card";
+export { default as BeerCard } from "./BeerCard/BeerCard";
 export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
 export { default as Header } from "./Header/Header";
 export { default as MainContent } from "./MainContent/MainContent";

@@ -13,7 +13,7 @@ function BeerPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const apiCall = async () => {
+    const callPunkAPI = async () => {
       const apiResponse = await fetch(getAPIUrl(paginationParam));
       if (!apiResponse.ok) {
         setError("Something wrong happened");
@@ -22,23 +22,39 @@ function BeerPage() {
         setError("");
       }
       const jsonResponse = await apiResponse.json();
-      setData(jsonResponse);
+      setData([...data, ...jsonResponse]);
     };
-    apiCall();
+    callPunkAPI();
   }, [paginationParam]); //todo update dependency array
 
   const handlePagination = () => {
-    setPaginationParam({
-      pageNum: paginationParam.pageNum + 1,
-      perPage: paginationParam.perPage,
+    setPaginationParam((prevParam) => {
+      return { pageNum: prevParam.pageNum + 1, perPage: prevParam.perPage };
     });
   };
 
   return (
     <BeerPageStyle>
+      <a href="#main" className="skip-to-main-content-link">
+        Skip to main content
+      </a>
       <Header />
-      <MainContent data={data} />
-      <Pagination onClick={handlePagination} />
+      <MainContent data={data} id="main" />
+      {data && data.length > 0 && (
+        <Pagination
+          onClick={handlePagination}
+          text="Load More"
+          icon={{
+            name: "downarrow",
+            style: {
+              fill: "#2e82ce",
+              viewBox: "0 0 512 512",
+              width: ".7rem",
+              height: ".7rem",
+            },
+          }}
+        />
+      )}
     </BeerPageStyle>
   );
 }

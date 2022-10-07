@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-import Card from "../Card/Card";
+import BeerCard from "../BeerCard/BeerCard";
 import MainContentStyle from "./MainContentStyle";
 
 function MainContent({ data }) {
   return (
     <MainContentStyle>
-      {data && data.map((beer) => <Card beer={beer} key={beer.id} />)}
+      {data && data.map((beer) => <BeerCard beer={beer} key={beer.id} />)}
     </MainContentStyle>
   );
 }
