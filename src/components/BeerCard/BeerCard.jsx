@@ -27,7 +27,6 @@ function BeerCard({
     <BeerCardStyle className="hz-card_style">
       <div
         className="hz-card_container"
-        onClick={navigateToBeer}
         role="link"
         tabIndex={0}
         onKeyPress={(e) => navigateToBeer(e)}

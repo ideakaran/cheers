@@ -80,7 +80,7 @@ function BeerPage() {
         forwardedRef={cardRef}
         loadMore={loadMore}
       />
-      {hasBeer && (
+      {hasBeer && !loadMore && (
         <Pagination
           onClick={handlePagination}
           text={PAGINATION_BTN_TEXT_LOAD_MORE}
