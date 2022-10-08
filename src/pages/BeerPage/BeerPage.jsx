@@ -10,6 +10,8 @@ import {
   FETCH_STATUS_LOADING,
   PAGINATION_BTN_TEXT_LOAD_MORE,
   SCROLL_BEHAVIOR_SMOOTH,
+  TXT_BEERS,
+  TXT_BEER_NOT_FOUND,
 } from "../../utils/constants";
 
 function BeerPage() {
@@ -23,6 +25,7 @@ function BeerPage() {
 
   let error;
   let loadMore = false;
+  const hasBeer = data.beers && data.beers.length > 0;
 
   if (data.fetchStatus === FETCH_STATUS_LOADING) {
     loadMore = true;
@@ -59,14 +62,14 @@ function BeerPage() {
       <a href="#main" className="skip-to-main-content-link">
         Skip to main content
       </a>
-      <Header />
+      <Header title={hasBeer ? TXT_BEERS : TXT_BEER_NOT_FOUND} />
       <MainContent
         data={data.beers}
         id="main"
         forwardedRef={cardRef}
         loadMore={loadMore}
       />
-      {data.beers && data.beers.length > 0 && (
+      {hasBeer && (
         <Pagination
           onClick={handlePagination}
           text={PAGINATION_BTN_TEXT_LOAD_MORE}

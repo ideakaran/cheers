@@ -9,6 +9,9 @@ const FETCH_STATUS_LOADING = "loading";
 const PAGINATION_BTN_TEXT_LOAD_MORE = "Load More";
 const PAGINATION_BTN_TEXT_NEXT = "Next";
 const SCROLL_BEHAVIOR_SMOOTH = "smooth";
+const TXT_BEERS = "Beers";
+const TXT_BEER_NOT_FOUND = "Beers Not Found";
+
 const MEDIA = {
   desktop: "@media(min-width: 1000px)",
   tablet: "@media(min-width: 768px)",
@@ -29,5 +32,7 @@ export {
   PAGINATION_BTN_TEXT_LOAD_MORE,
   PAGINATION_BTN_TEXT_NEXT,
   SCROLL_BEHAVIOR_SMOOTH,
+  TXT_BEERS,
+  TXT_BEER_NOT_FOUND,
   MEDIA,
 };
