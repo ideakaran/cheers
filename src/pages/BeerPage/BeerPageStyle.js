@@ -8,12 +8,14 @@ const BeerPageStyle = styled.div`
     left: -9999px;
     z-index: 999;
     padding: 1em;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     opacity: 0;
   }
   .skip-to-main-content-link:focus {
     left: 50%;
+    color: white;
+    background-color: black;
     transform: translateX(-50%);
     opacity: 1;
   }
