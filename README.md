@@ -1,4 +1,4 @@
-This app fetches data from punkapi and displays the beer.
+This app fetches data from punkapi and displays beer information.
 
 To use the app,
 
