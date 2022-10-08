@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import PaginationStyle from "./PaginationStyle";
 import SvgLoader from "../SvgLoader/SvgLoader";
+import { PAGINATION_BTN_TEXT_NEXT } from "../../utils/constants";
 
 function Pagination({ onClick: onPaginate, text, icon }) {
   const handlePagination = () => {
@@ -11,14 +12,14 @@ function Pagination({ onClick: onPaginate, text, icon }) {
 
   return (
     <PaginationStyle onClick={handlePagination}>
-      {text}
+      {text || PAGINATION_BTN_TEXT_NEXT}
       {icon && <SvgLoader iconName={icon.name} style={icon.style} />}
     </PaginationStyle>
   );
 }
 
 Pagination.defaultProps = {
-  text: "Next",
+  text: PAGINATION_BTN_TEXT_NEXT,
   onClick: () => {},
   icon: {
     name: "",

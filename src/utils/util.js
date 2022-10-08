@@ -1,12 +1,9 @@
-const BEER_API = "https://api.punkapi.com/v2/beers";
-const BEER_DESC_LIMIT_ON_MOB = 150;
-const BEER_DESC_LIMIT = 100;
-const BEER_DESC_SEPARATOR = "...";
-
-const media = {
-  desktop: "@media(min-width: 1000px)",
-  tablet: "@media(min-width: 768px)",
-};
+import {
+  BEER_API,
+  BEER_DESC_LIMIT_ON_MOB,
+  BEER_DESC_LIMIT,
+  BEER_DESC_SEPARATOR,
+} from "./constants";
 
 function formatIngredients(ingredients) {
   if (ingredients) {
@@ -69,5 +66,4 @@ export {
   getAPIUrl,
   parseError,
   scrollTo,
-  media,
 };

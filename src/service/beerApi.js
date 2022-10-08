@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { ACTION_FETCH_ALL_BEERS } from "../utils/constants";
 
 const fetchAllbeers = createAsyncThunk(
-  "fetch-all-beers",
+  ACTION_FETCH_ALL_BEERS,
   async (apiUrl, thunkAPI) => {
     try {
       const apiResponse = await fetch(apiUrl);

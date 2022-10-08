@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../utils/util";
+import { MEDIA } from "../../utils/constants";
 
 const BeerCardStyle = styled.div`
   padding: 1rem;
@@ -15,7 +15,7 @@ const BeerCardStyle = styled.div`
     height: 100%;
   }
 
-  ${media.tablet} {
+  ${MEDIA.tablet} {
     flex: 50%;
   }
 

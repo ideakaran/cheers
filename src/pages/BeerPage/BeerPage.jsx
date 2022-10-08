@@ -5,6 +5,12 @@ import BeerPageStyle from "./BeerPageStyle";
 import { Header, MainContent, Pagination } from "../../components";
 import { getAPIUrl, parseError, scrollTo } from "../../utils/util";
 import fetchAllbeers from "../../service/beerApi";
+import {
+  FETCH_STATUS_ERROR,
+  FETCH_STATUS_LOADING,
+  PAGINATION_BTN_TEXT_LOAD_MORE,
+  SCROLL_BEHAVIOR_SMOOTH,
+} from "../../utils/constants";
 
 function BeerPage() {
   const dispatch = useDispatch();
@@ -18,9 +24,9 @@ function BeerPage() {
   let error;
   let loadMore = false;
 
-  if (data.fetchStatus === "loading") {
+  if (data.fetchStatus === FETCH_STATUS_LOADING) {
     loadMore = true;
-  } else if (data.fetchStatus === "error") {
+  } else if (data.fetchStatus === FETCH_STATUS_ERROR) {
     error = data.error;
     loadMore = false;
   } else {
@@ -45,7 +51,7 @@ function BeerPage() {
       return { pageNum: prevParam.pageNum + 1, perPage: prevParam.perPage };
     });
     const ref = cardRef.current.children[cardRef.current.children.length - 1];
-    scrollTo(ref, { behavior: "smooth" });
+    scrollTo(ref, { behavior: SCROLL_BEHAVIOR_SMOOTH });
   };
 
   return (
@@ -63,7 +69,7 @@ function BeerPage() {
       {data.beers && data.beers.length > 0 && (
         <Pagination
           onClick={handlePagination}
-          text="Load More"
+          text={PAGINATION_BTN_TEXT_LOAD_MORE}
           icon={{
             name: "downarrow",
             style: {

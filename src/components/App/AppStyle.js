@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { media } from "../../utils/util";
+import { MEDIA } from "../../utils/constants";
 
 const AppStyle = styled.div`
   box-sizing: border-box;
   font-family: "proxima nova", "Roboto", sans-serif;
 
-  ${media.desktop} {
+  ${MEDIA.desktop} {
     max-width: 1200px;
   }
 `;

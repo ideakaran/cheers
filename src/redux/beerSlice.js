@@ -1,6 +1,12 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from "@reduxjs/toolkit";
 import fetchAllbeers from "../service/beerApi";
+import {
+  API_ERROR,
+  FETCH_STATUS_ERROR,
+  FETCH_STATUS_LOADING,
+  FETCH_STATUS_SUCCESS,
+} from "../utils/constants";
 
 export const initialState = {
   beers: [],
@@ -17,19 +23,19 @@ const beerSlice = createSlice({
       .addCase(fetchAllbeers.fulfilled, (state, action) => {
         state.beers = [...state.beers, ...action.payload];
         state.error = {};
-        state.fetchStatus = "success";
+        state.fetchStatus = FETCH_STATUS_SUCCESS;
       })
       .addCase(fetchAllbeers.pending, (state) => {
-        state.fetchStatus = "loading";
+        state.fetchStatus = FETCH_STATUS_LOADING;
         state.error = {};
       })
       .addCase(fetchAllbeers.rejected, (state, action) => {
         if (action.error.name === "AbortError") {
           state.fetchStatus = "aborterror";
         } else {
-          state.fetchStatus = "error";
+          state.fetchStatus = FETCH_STATUS_ERROR;
         }
-        state.error = { type: "API_ERROR", payload: action.payload };
+        state.error = { type: API_ERROR, payload: action.payload };
       });
   },
 });
