@@ -1,25 +1,16 @@
 /* eslint-disable no-param-reassign */
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import fetchAllbeers from "../service/beerApi";
 
-export const fetchAllbeers = createAsyncThunk(
-  "fetch-all-beers",
-  async (apiUrl, thunkAPI) => {
-    try {
-      const apiResponse = await fetch(apiUrl);
-      const jsonResponse = await apiResponse.json();
-      if (!apiResponse.ok) {
-        return thunkAPI.rejectWithValue(jsonResponse);
-      }
-      return thunkAPI.fulfillWithValue(jsonResponse);
-    } catch (error) {
-      throw thunkAPI.rejectWithValue(error);
-    }
-  },
-);
+export const initialState = {
+  beers: [],
+  fetchStatus: "",
+  error: {},
+};
 
 const beerSlice = createSlice({
   name: "beers",
-  initialState: { beers: [], fetchStatus: "", error: {} },
+  initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
@@ -38,7 +29,7 @@ const beerSlice = createSlice({
         } else {
           state.fetchStatus = "error";
         }
-        state.error = action?.payload;
+        state.error = { type: "API_ERROR", payload: action.payload };
       });
   },
 });

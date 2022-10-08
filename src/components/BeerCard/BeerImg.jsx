@@ -23,12 +23,12 @@ function BeerImg({ imageUrl, ingredients }) {
 
 BeerImg.defaultProps = {
   imageUrl: "",
-  ingredients: [],
+  ingredients: {},
 };
 
 export const propTypes = {
   imageUrl: PropTypes.string,
-  ingredients: PropTypes.arrayOf(PropTypes.shape({})),
+  ingredients: PropTypes.instanceOf(Object),
 };
 
 BeerImg.propTypes = propTypes;

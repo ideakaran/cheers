@@ -1,4 +1,5 @@
 import React from "react";
+import { SVGDefaultProps, SVGProps } from "./SvgProps";
 
 function DownArrow({ style }) {
   const { width, height, fill, viewBox } = style;
@@ -35,5 +36,8 @@ function DownArrow({ style }) {
     </svg>
   );
 }
+
+DownArrow.defaultProps = SVGDefaultProps;
+DownArrow.propTypes = SVGProps;
 
 export default DownArrow;

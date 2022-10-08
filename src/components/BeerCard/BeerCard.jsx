@@ -36,7 +36,7 @@ BeerCard.propTypes = {
     image_url: PropTypes.string,
     tagline: PropTypes.string,
     description: PropTypes.string,
-    ingredients: PropTypes.instanceOf(Array),
+    ingredients: PropTypes.instanceOf(Object),
   }),
 };
 

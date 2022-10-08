@@ -42,11 +42,32 @@ function getEmptyBeers(size = 10) {
   return emptyBeers;
 }
 
+function parseErrorResponse(error) {
+  let errorMsg = "";
+  const quote = '"';
+  error.data.map((err) => {
+    errorMsg += `${err.location} param ${quote}${
+      err.param
+    }${quote} ${err.msg.toLowerCase()}.{br}`;
+    return errorMsg;
+  });
+  return errorMsg;
+}
+
+function parseError(error) {
+  let errMsg;
+  if (error?.type === "API_ERROR") {
+    errMsg = parseErrorResponse(error.payload);
+  }
+  return errMsg;
+}
+
 export {
   formatIngredients,
   getEmptyBeers,
   limitCharacters,
   getAPIUrl,
+  parseError,
   scrollTo,
   media,
 };

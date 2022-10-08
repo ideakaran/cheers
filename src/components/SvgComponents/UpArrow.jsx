@@ -1,4 +1,5 @@
 import React from "react";
+import { SVGDefaultProps, SVGProps } from "./SvgProps";
 
 function UpArrow({ style }) {
   const { width, height, fill, viewBox } = style;
@@ -34,5 +35,8 @@ function UpArrow({ style }) {
     </svg>
   );
 }
+
+UpArrow.defaultProps = SVGDefaultProps;
+UpArrow.propTypes = SVGProps;
 
 export default UpArrow;

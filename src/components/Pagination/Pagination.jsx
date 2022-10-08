@@ -20,12 +20,15 @@ function Pagination({ onClick: onPaginate, text, icon }) {
 Pagination.defaultProps = {
   text: "Next",
   onClick: () => {},
-  icon: "",
+  icon: {
+    name: "",
+    style: {},
+  },
 };
 
 Pagination.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
-  icon: PropTypes.string,
+  icon: PropTypes.instanceOf(Object),
 };
 export default Pagination;

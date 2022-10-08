@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import BeerPageStyle from "./BeerPageStyle";
 import { Header, MainContent, Pagination } from "../../components";
-import { getAPIUrl, scrollTo } from "../../utils/util";
-import { fetchAllbeers } from "../../redux/beerSlice";
+import { getAPIUrl, parseError, scrollTo } from "../../utils/util";
+import fetchAllbeers from "../../service/beerApi";
 
 function BeerPage() {
   const dispatch = useDispatch();
@@ -15,12 +15,23 @@ function BeerPage() {
     perPage: 10,
   });
 
+  let error;
   let loadMore = false;
-  if (data?.fetchStatus === "loading") {
+
+  if (data.fetchStatus === "loading") {
     loadMore = true;
+  } else if (data.fetchStatus === "error") {
+    error = data.error;
+    loadMore = false;
   } else {
     loadMore = false;
   }
+
+  useEffect(() => {
+    if (error) {
+      throw new Error(parseError(error));
+    }
+  }, [error]);
 
   useEffect(() => {
     const promise = dispatch(fetchAllbeers(getAPIUrl(paginationParam)));

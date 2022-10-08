@@ -8,6 +8,7 @@ const ScrollToStyle = styled.button`
   border: none;
   background-color: black;
   border-radius: 5px;
+  padding: 0.1rem 0.2rem;
 
   &:hover {
     background-color: #f3a147;
