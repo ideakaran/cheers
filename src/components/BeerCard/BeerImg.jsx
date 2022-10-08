@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ToolTip from "../ToolTip/ToolTip";
 import { formatIngredients } from "../../utils/util";
 
-function BeerImg({ imageUrl, ingredients }) {
+function BeerImg({ imageUrl, ingredients, name }) {
   return (
     <div className="hz-card_img_container">
       <div
@@ -13,7 +13,7 @@ function BeerImg({ imageUrl, ingredients }) {
       >
         {imageUrl && (
           <ToolTip tip={formatIngredients(ingredients)} position="top">
-            <img src={imageUrl} loading="lazy" alt="beer" />
+            <img src={imageUrl} loading="lazy" alt={`${name} Beer`} />
           </ToolTip>
         )}
       </div>
@@ -23,11 +23,13 @@ function BeerImg({ imageUrl, ingredients }) {
 
 BeerImg.defaultProps = {
   imageUrl: "",
+  name: "",
   ingredients: {},
 };
 
 export const propTypes = {
   imageUrl: PropTypes.string,
+  name: PropTypes.string,
   ingredients: PropTypes.instanceOf(Object),
 };
 

@@ -8,7 +8,10 @@ function App() {
     <AppStyle className="hz-app">
       <Routes>
         <Route path="/" element={<BeerPage />} />
-        <Route path="/beer/:id" element={<p>Not implemented</p>} />
+        <Route
+          path="/beer/:id"
+          element={<p className="hz-beer-id-page">Not implemented</p>}
+        />
       </Routes>
     </AppStyle>
   );

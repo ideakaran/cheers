@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import BeerPageStyle from "./BeerPageStyle";
-import { Header, MainContent, Pagination } from "../../components";
+import { Header, MainContent, Pagination, Footer } from "../../components";
 import { getAPIUrl, parseError, scrollTo } from "../../utils/util";
 import fetchAllbeers from "../../service/beerApi";
 import {
@@ -11,7 +11,7 @@ import {
   PAGINATION_BTN_TEXT_LOAD_MORE,
   SCROLL_BEHAVIOR_SMOOTH,
   TXT_BEERS,
-  TXT_BEER_NOT_FOUND,
+  TXT_BEERS_NOT_FOUND,
 } from "../../utils/constants";
 
 function BeerPage() {
@@ -57,12 +57,23 @@ function BeerPage() {
     scrollTo(ref, { behavior: SCROLL_BEHAVIOR_SMOOTH });
   };
 
+  const headerText = () => {
+    let headerTitle = "";
+    if (hasBeer && !error) {
+      headerTitle = TXT_BEERS;
+      if (data.beers.length === 0) {
+        headerTitle = TXT_BEERS_NOT_FOUND;
+      }
+    }
+    return headerTitle;
+  };
+
   return (
     <BeerPageStyle>
       <a href="#main" className="skip-to-main-content-link">
         Skip to main content
       </a>
-      <Header title={hasBeer ? TXT_BEERS : TXT_BEER_NOT_FOUND} />
+      <Header title={headerText()} />
       <MainContent
         data={data.beers}
         id="main"
@@ -76,14 +87,16 @@ function BeerPage() {
           icon={{
             name: "downarrow",
             style: {
-              fill: "#2e82ce",
+              fill: "#2169aa",
               viewBox: "0 0 512 512",
               width: ".7rem",
               height: ".7rem",
+              title: "Load More",
             },
           }}
         />
       )}
+      <Footer />
     </BeerPageStyle>
   );
 }

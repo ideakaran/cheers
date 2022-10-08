@@ -1,4 +1,5 @@
 export { default as BeerCard } from "./BeerCard/BeerCard";
+export { default as Footer } from "./Footer/Footer";
 export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
 export { default as Header } from "./Header/Header";
 export { default as MainContent } from "./MainContent/MainContent";

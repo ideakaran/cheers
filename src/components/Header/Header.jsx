@@ -8,7 +8,7 @@ function Header({ title }) {
 }
 
 Header.defaultProps = {
-  title: "Beers",
+  title: "",
 };
 
 Header.propTypes = {

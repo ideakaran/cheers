@@ -3,7 +3,7 @@ import React from "react";
 import { getEmptyBeers } from "../../utils/util";
 
 import BeerCard from "../BeerCard/BeerCard";
-import ScrollTo from "../ScrollTo/ScrollTo";
+
 import MainContentStyle from "./MainContentStyle";
 
 function MainContent({ data, forwardedRef, loadMore }) {
@@ -15,17 +15,6 @@ function MainContent({ data, forwardedRef, loadMore }) {
         {loadMore &&
           getEmptyBeers().map((beer) => <BeerCard beer={beer} key={beer.id} />)}
       </div>
-      <ScrollTo
-        icon={{
-          name: "uparrow",
-          style: {
-            fill: "#2e82ce",
-            viewBox: "0 0 512 512",
-            width: "1.5rem",
-            height: "1.5rem",
-          },
-        }}
-      />
     </MainContentStyle>
   );
 }

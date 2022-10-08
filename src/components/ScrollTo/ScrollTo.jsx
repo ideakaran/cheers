@@ -28,7 +28,11 @@ function ScrollTo({ icon: { name, style } }) {
   return (
     <div>
       {showScrollTop && (
-        <ScrollToStyle className="hz-scroll-to-top" onClick={scrollToTop}>
+        <ScrollToStyle
+          className="hz-scroll-to-top"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
           <SvgLoader iconName={name} style={style} />
         </ScrollToStyle>
       )}

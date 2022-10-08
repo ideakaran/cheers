@@ -2,7 +2,7 @@ import React from "react";
 import { SVGDefaultProps, SVGProps } from "./SvgProps";
 
 function UpArrow({ style }) {
-  const { width, height, fill, viewBox } = style;
+  const { width, height, fill, viewBox, title } = style;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +11,7 @@ function UpArrow({ style }) {
       height={height}
       viewBox={viewBox}
     >
+      <title>{title}</title>
       <path
         fill={fill}
         d="M502.689,324.653L269.957,150.109c-8.276-6.206-19.653-6.206-27.927,0L9.311,324.653

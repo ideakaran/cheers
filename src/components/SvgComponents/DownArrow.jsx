@@ -2,7 +2,7 @@ import React from "react";
 import { SVGDefaultProps, SVGProps } from "./SvgProps";
 
 function DownArrow({ style }) {
-  const { width, height, fill, viewBox } = style;
+  const { width, height, fill, viewBox, title } = style;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,6 +12,7 @@ function DownArrow({ style }) {
       viewBox={viewBox}
       xmlSpace="preserve"
     >
+      <title>{title}</title>
       <path
         fill={fill}
         d="M505.183,123.179c-9.087-9.087-23.824-9.089-32.912,0.002l-216.266,216.27L39.729,123.179

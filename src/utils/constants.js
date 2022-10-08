@@ -7,10 +7,11 @@ const FETCH_STATUS_SUCCESS = "success";
 const FETCH_STATUS_ERROR = "error";
 const FETCH_STATUS_LOADING = "loading";
 const PAGINATION_BTN_TEXT_LOAD_MORE = "Load More";
+const PAGINATION_BTN_TEXT_LOAD_MORE_BEERS = "Load More Beers";
 const PAGINATION_BTN_TEXT_NEXT = "Next";
 const SCROLL_BEHAVIOR_SMOOTH = "smooth";
 const TXT_BEERS = "Beers";
-const TXT_BEER_NOT_FOUND = "Beers Not Found";
+const TXT_BEERS_NOT_FOUND = "Beers Not Found";
 
 const MEDIA = {
   desktop: "@media(min-width: 1000px)",
@@ -30,9 +31,10 @@ export {
   FETCH_STATUS_ERROR,
   FETCH_STATUS_LOADING,
   PAGINATION_BTN_TEXT_LOAD_MORE,
+  PAGINATION_BTN_TEXT_LOAD_MORE_BEERS,
   PAGINATION_BTN_TEXT_NEXT,
   SCROLL_BEHAVIOR_SMOOTH,
   TXT_BEERS,
-  TXT_BEER_NOT_FOUND,
+  TXT_BEERS_NOT_FOUND,
   MEDIA,
 };

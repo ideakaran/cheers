@@ -8,6 +8,10 @@ const AppStyle = styled.div`
   ${MEDIA.desktop} {
     max-width: 1200px;
   }
+
+  .hz-beer-id-page {
+    text-align: center;
+  }
 `;
 
 export default AppStyle;

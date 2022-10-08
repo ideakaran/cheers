@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { DownArrow, UpArrow } from "../SvgComponents";
 
 function SvgLoader(props) {
@@ -15,5 +16,15 @@ function SvgLoader(props) {
   }
   return <>{getSvgIcon()}</>;
 }
+
+SvgLoader.defaultProps = {
+  iconName: "",
+  style: {},
+};
+
+SvgLoader.propTypes = {
+  iconName: PropTypes.string,
+  style: PropTypes.instanceOf(Object),
+};
 
 export default SvgLoader;

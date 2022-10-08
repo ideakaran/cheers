@@ -69,7 +69,7 @@ const BeerCardStyle = styled.div`
     }
 
     h5 {
-      color: #db9d27;
+      color: #7a5102;
       font-weight: 500;
       margin-bottom: 0;
       margin-top: 0.5rem;

@@ -10,6 +10,7 @@ const SVGProps = {
     height: PropTypes.string,
     fill: PropTypes.string,
     viewBox: PropTypes.string,
+    title: PropTypes.string,
   }),
 };
 
