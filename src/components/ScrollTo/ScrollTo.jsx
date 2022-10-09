@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SHOW_SCROLL_TO_TOP_PAGE_Y_OFFSET } from "../../utils/constants";
 import { scrollTo } from "../../utils/util";
 import SvgLoader from "../SvgLoader/SvgLoader";
 import ScrollToStyle from "./ScrollToStyle";
@@ -7,7 +8,7 @@ function ScrollTo({ icon: { name, style } }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const handleScrollButton = () => {
-    if (window.pageYOffset > 200) {
+    if (window.pageYOffset > SHOW_SCROLL_TO_TOP_PAGE_Y_OFFSET) {
       setShowScrollTop(true);
     } else {
       setShowScrollTop(false);

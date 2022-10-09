@@ -9,6 +9,8 @@ import {
   FETCH_STATUS_ERROR,
   FETCH_STATUS_LOADING,
   PAGINATION_BTN_TEXT_LOAD_MORE,
+  PAGINATION_PAGE_NUM,
+  PAGINATION_PER_PAGE,
   SCROLL_BEHAVIOR_SMOOTH,
   TXT_BEERS,
   TXT_BEERS_NOT_FOUND,
@@ -19,8 +21,8 @@ function BeerPage() {
   const data = useSelector((state) => state.beers);
   const cardRef = useRef(null);
   const [paginationParam, setPaginationParam] = useState({
-    pageNum: 1,
-    perPage: 10,
+    pageNum: PAGINATION_PER_PAGE,
+    perPage: PAGINATION_PAGE_NUM,
   });
 
   let error;
