@@ -77,12 +77,7 @@ function BeerPage() {
         {TXT_SKIP_TO_MAIN_CONTENT}
       </a>
       <Header title={headerText()} />
-      <MainContent
-        data={data.beers}
-        id="main"
-        forwardedRef={cardRef}
-        loadMore={loadMore}
-      >
+      <MainContent data={data.beers} forwardedRef={cardRef} loadMore={loadMore}>
         {hasBeer && !loadMore && (
           <Pagination
             onClick={handlePagination}

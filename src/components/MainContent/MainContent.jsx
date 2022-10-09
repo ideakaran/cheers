@@ -8,7 +8,7 @@ import MainContentStyle from "./MainContentStyle";
 
 function MainContent({ data, forwardedRef, loadMore, children }) {
   return (
-    <MainContentStyle>
+    <MainContentStyle id="main">
       <div className="hz-all-cards_wrapper" ref={forwardedRef}>
         {data && data.map((beer) => <BeerCard beer={beer} key={beer.id} />)}
 

@@ -6,5 +6,5 @@ To use the app,
 2. npm install
 3. npm run dev
 
-Demo(Netlify): https://6342fbedf42c313a47b7314e--hzcheers.netlify.app
+Demo(Netlify): https://63430083ba7c2d4503b2aa26--hzcheers.netlify.app
 Docker Image: https://hub.docker.com/repository/docker/kpant/hztask/
