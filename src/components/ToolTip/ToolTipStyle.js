@@ -16,8 +16,8 @@ const ToolTipStyle = styled.div`
     color: white;
     background: black;
     font-size: 12px;
-    font-weight: 300;
-    font-family: "Roboto" sans-serif;
+    font-weight: ${(props) => props.theme.fontWeights.semilight};
+    font-family: ${(props) => props.theme.fonts.tooltip};
     z-index: 100;
     text-align: center;
     word-break: break-word;
@@ -42,7 +42,7 @@ const ToolTipStyle = styled.div`
 
   .hz-card_img_tooltip.top::before {
     top: 100%;
-    border-top-color: black;
+    border-top-color: #000;
   }
 `;
 

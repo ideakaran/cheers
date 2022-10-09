@@ -9,7 +9,7 @@ const BeerCardStyle = styled.div`
 
   .hz-card_container {
     /* width: 100%; */
-    border-radius: 0.35rem;
+    border-radius: ${(props) => props.theme.radii.base};
     display: flex;
     box-shadow: 2px 2px 6px 2px rgb(0 0 0 / 10%);
     height: 100%;
@@ -22,7 +22,7 @@ const BeerCardStyle = styled.div`
   .hz-card_container:hover {
     cursor: pointer;
     transition: all 0.5s;
-    background-color: #f2f8fd;
+    background-color: ${(props) => props.theme.colors.accent};
   }
 
   .hz-card_img_container {
@@ -64,28 +64,28 @@ const BeerCardStyle = styled.div`
 
     h3 {
       margin-bottom: 0;
-      font-weight: 700;
-      font-size: 1.3rem;
+      font-weight: ${(props) => props.theme.fontWeights.bold};
+      font-size: ${(props) => props.theme.fontSizes.m};
     }
 
     h5 {
-      color: #7a5102;
-      font-weight: 500;
+      color: ${(props) => props.theme.colors.primary};
+      font-weight: ${(props) => props.theme.fontWeights.normal};
       margin-bottom: 0;
       margin-top: 0.5rem;
     }
 
     .hz-card_description {
       p {
-        color: #5b5b5b;
-        font-size: 0.8rem;
-        line-height: 130%;
+        color: ${(props) => props.theme.colors.text};
+        font-size: ${(props) => props.theme.fontSizes.s};
+        line-height: ${(props) => props.theme.lineheights.body};
       }
     }
   }
 
   .hz-card_loading {
-    background: #514545;
+    background: ${(props) => props.theme.colors.muted};
     background-image: linear-gradient(
       90deg,
       #f7eded33,

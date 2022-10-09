@@ -15,9 +15,9 @@ const BeerPageStyle = styled.div`
   .skip-to-main-content-link:focus {
     left: 50%;
     color: white;
-    background-color: black;
+    background-color: ${(props) => props.theme.colors.text};
     transform: translateX(-50%);
-    opacity: 1;
+    opacity: ${(props) => props.theme.opacity.full};
   }
 `;
 

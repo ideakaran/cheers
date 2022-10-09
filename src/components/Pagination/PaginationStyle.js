@@ -3,21 +3,21 @@ import styled from "styled-components";
 const PaginationStyle = styled.button`
   background-color: transparent;
   border: none;
-  color: #2169aa;
+  color: ${(props) => props.theme.colors.secondary};
   display: flex;
   margin: 1rem auto;
   gap: 0.3rem;
   cursor: pointer;
   padding: 0.2rem;
-  font-weight: 700;
+  font-weight: ${(props) => props.theme.fontWeights.bold};
   &:hover {
     border-bottom: 0.08rem solid #2169aa;
   }
 
   .loadMore {
     border: none;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-color: #eee;
     cursor: pointer;
   }

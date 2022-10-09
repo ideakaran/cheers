@@ -9,7 +9,7 @@ const ErrorBoundaryStyle = styled.div`
 
   .hz-error-label {
     font-size: x-large;
-    color: red;
+    color: ${(props) => props.theme.colors.danger};
   }
 
   .hz-error-message {
