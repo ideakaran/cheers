@@ -6,7 +6,7 @@ import BeerCard from "../BeerCard/BeerCard";
 
 import MainContentStyle from "./MainContentStyle";
 
-function MainContent({ data, forwardedRef, loadMore }) {
+function MainContent({ data, forwardedRef, loadMore, children }) {
   return (
     <MainContentStyle>
       <div className="hz-all-cards_wrapper" ref={forwardedRef}>
@@ -15,6 +15,7 @@ function MainContent({ data, forwardedRef, loadMore }) {
         {loadMore &&
           getEmptyBeers().map((beer) => <BeerCard beer={beer} key={beer.id} />)}
       </div>
+      {children}
     </MainContentStyle>
   );
 }

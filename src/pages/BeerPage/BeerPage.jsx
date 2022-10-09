@@ -82,23 +82,24 @@ function BeerPage() {
         id="main"
         forwardedRef={cardRef}
         loadMore={loadMore}
-      />
-      {hasBeer && !loadMore && (
-        <Pagination
-          onClick={handlePagination}
-          text={PAGINATION_BTN_TEXT_LOAD_MORE}
-          icon={{
-            name: "downarrow",
-            style: {
-              fill: "#2169aa",
-              viewBox: "0 0 512 512",
-              width: ".7rem",
-              height: ".7rem",
-              title: "Load More",
-            },
-          }}
-        />
-      )}
+      >
+        {hasBeer && !loadMore && (
+          <Pagination
+            onClick={handlePagination}
+            text={PAGINATION_BTN_TEXT_LOAD_MORE}
+            icon={{
+              name: "downarrow",
+              style: {
+                fill: "#2169aa",
+                viewBox: "0 0 512 512",
+                width: ".7rem",
+                height: ".7rem",
+                title: PAGINATION_BTN_TEXT_LOAD_MORE,
+              },
+            }}
+          />
+        )}
+      </MainContent>
       <Footer />
     </BeerPageStyle>
   );
