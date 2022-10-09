@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollTo from "../ScrollTo/ScrollTo";
+import { ScrollTo } from "../index";
 
 function Footer() {
   return (

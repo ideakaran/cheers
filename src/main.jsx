@@ -11,13 +11,13 @@ import Themer from "./theme/Themer";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <ErrorBoundary>
-        <Themer>
+      <Themer>
+        <ErrorBoundary>
           <BrowserRouter>
             <App />
           </BrowserRouter>
-        </Themer>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </Themer>
     </Provider>
   </React.StrictMode>,
 );

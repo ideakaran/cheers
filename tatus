@@ -1,0 +1,132 @@
+[33mcommit 1f9907ec7b46c7ee49ef6cf1ce98131c3a14e28b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sun Oct 9 10:44:33 2022 +0545
+
+    [HZ-21] Use constants
+
+[33mcommit 9720a59bd1441cfbcbf5721bf8f3021db55a543f[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sun Oct 9 01:07:44 2022 +0545
+
+    [HZ-20] Update font
+
+[33mcommit 7d103fcad605708932bd21c0a17f1eb88edaecd4[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sun Oct 9 00:23:39 2022 +0545
+
+    [HZ-19] Hide Pagination if already active
+
+[33mcommit be901e054e5990f22bb2ac6491537c049ecca745[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 23:36:19 2022 +0545
+
+    [HZ-18] Update readme, create docker image and deploy to netlify, update css
+
+[33mcommit 558ad589dc5c30687f1a20858047f7213777f2b7[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 22:50:30 2022 +0545
+
+    [HZ-17] Work on accessibility, refactor components
+
+[33mcommit a1c586d6c03593a065d5cf2fff85b01351aa0db3[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 17:25:07 2022 +0545
+
+    [HZ-16] Setup Cypress, start working on cypress test, add props to header
+
+[33mcommit 7cd5cc5b19dd32a856448b2b08b160cf5b8b6479[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 16:19:35 2022 +0545
+
+    [HZ-15] Refactor changes, Replace hardcoded string by constant
+
+[33mcommit 22dc334cbf433212fb2e1f4ba76f47add09ff60b[m
+Merge: a484646 c6c53c7
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 15:42:01 2022 +0545
+
+    Merge branch 'master' of https://github.com/ideakaran/hztask
+
+[33mcommit a48464657f0b0d2570ab441e636c561a0655d2b2[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Sat Oct 8 15:40:33 2022 +0545
+
+    [HZ-14] Pass linting errors, create simple errorboundary to catch errors
+
+[33mcommit c6c53c7d6dce2f8b510761d1c055351289447270[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 23:54:52 2022 +0545
+
+    Update README.md
+
+[33mcommit 6ccf3aab46335dfe9a88138f89532de3abe231e4[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 23:19:42 2022 +0545
+
+    [HZ-13] Update readme
+
+[33mcommit f7d2cfc920f6dd22de5ac0e31178d53143202020[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 23:08:47 2022 +0545
+
+    [HZ-12] Use abort controller and Resolve useEffect double rendering issue
+
+[33mcommit 8bc2edf74986ef44e0549c1702d6c31602b87f06[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 22:59:31 2022 +0545
+
+    [HZ-11] Use Redux to call api and update store
+
+[33mcommit 3718fe87a48b11a0b71e6598dc5d7de852b4c72f[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 20:51:53 2022 +0545
+
+    [HZ-9] Add dummy skeleton, tooltip, header component
+
+[33mcommit 565cee7ce9d8d82d3db6308778c9004e1eef855e[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 15:12:46 2022 +0545
+
+    [HZ-8] Add Scroll to feature and style beercard cmp
+
+[33mcommit 040f5b003e459d9b1358b6d6a65132d31887d733[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 12:56:29 2022 +0545
+
+    [HZ-7] Style BeerCard, make page responsive, refactor Beercontent cmp
+
+[33mcommit acecf3ba69a4d691d21aba51f14840b3f1e1e866[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 10:22:12 2022 +0545
+
+    [HZ-6] style pagination component, create svgloader cmp and add prop validation
+
+[33mcommit 4fb6a82f5b7e34e989e541f4d723c670b750a789[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 06:52:35 2022 +0545
+
+    [HZ-5] Complete Task and Add Load more and update record onClick
+
+[33mcommit 02fcb4b197b8921742752af56444a1420c3f678a[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Fri Oct 7 05:08:36 2022 +0545
+
+    [HZ-4] Use useEffect to fetch data and work on maincontent
+
+[33mcommit 7db819f617e4606db843380049c0fc506261a52f[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Thu Oct 6 18:06:50 2022 +0545
+
+    [HZ-3] Install dependencies and setup eslint
+
+[33mcommit a32b24181984f89479daf7f09d4265c1560f8341[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Thu Oct 6 17:10:58 2022 +0545
+
+    [HZ-2] Initial DockerFile Setup
+
+[33mcommit f5f8fc41d30367eb756fe0e25469f1f6e4f712db[m
+Author: KaranPant <kpant321@gmail.com>
+Date:   Thu Oct 6 13:40:36 2022 +0545
+
+    [HZ-1] Initial React App Setup With Vite

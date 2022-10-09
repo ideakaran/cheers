@@ -14,6 +14,7 @@ import {
   SCROLL_BEHAVIOR_SMOOTH,
   TXT_BEERS,
   TXT_BEERS_NOT_FOUND,
+  TXT_SKIP_TO_MAIN_CONTENT,
 } from "../../utils/constants";
 
 function BeerPage() {
@@ -73,7 +74,7 @@ function BeerPage() {
   return (
     <BeerPageStyle>
       <a href="#main" className="skip-to-main-content-link">
-        Skip to main content
+        {TXT_SKIP_TO_MAIN_CONTENT}
       </a>
       <Header title={headerText()} />
       <MainContent
