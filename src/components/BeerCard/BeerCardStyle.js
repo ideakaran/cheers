@@ -68,10 +68,11 @@ const BeerCardStyle = styled.div`
       font-size: ${(props) => props.theme.fontSizes.m};
     }
 
-    h5 {
+    .hz-card_tagline {
       color: ${(props) => props.theme.colors.primary};
       font-weight: ${(props) => props.theme.fontWeights.normal};
       margin-bottom: 0;
+      font-size: 0.83rem;
       margin-top: 0.5rem;
     }
 
