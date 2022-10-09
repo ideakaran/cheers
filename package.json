@@ -10,7 +10,8 @@
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --fix",
     "prepare": "husky install",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "deploy": "ntl deploy"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
