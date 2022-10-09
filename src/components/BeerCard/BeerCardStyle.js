@@ -53,7 +53,7 @@ const BeerCardStyle = styled.div`
     flex: 1;
     padding: 0.25rem 0.5rem;
 
-    h5.hz-card_loading,
+    p.hz-card_loading,
     h3.hz-card_loading,
     div.hz-card_loading {
       width: 100%;

@@ -11,7 +11,8 @@
     "lint-fix": "eslint src/**/*.js --fix",
     "prepare": "husky install",
     "cypress": "cypress open",
-    "deploy": "ntl deploy"
+    "deploy": "ntl deploy",
+    "buildeploy": "npm run build && npm run deploy"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
